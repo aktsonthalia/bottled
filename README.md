@@ -2,17 +2,18 @@
 
 Code for the paper, "Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?"
 
-
 ## ⚙️ Setup
 
 ### 1. Machine settings
 
 Copy the machine config template:
+
 ```bash
 cp configs/machine.yaml.example configs/machine.yaml
 ```
 
 In `configs/machine.yaml`, 
+
 - set `artifacts_dir` (datasets -> `<artifacts_dir>/data`, results -> `<artifacts_dir>/results`) 
 - set `conda_envs_root` (the directory where you store your conda environments)
 
@@ -31,6 +32,8 @@ Activate it:
 conda activate <PATH>
 ```
 
+
+
 ### 3. Agents' environment
 
 This environment is used by agents.
@@ -41,6 +44,8 @@ Set `agents_env_name` in `configs/machine.yaml`; the environment is built at `<c
 nohup bash scripts/create_solvers_base.sh > agents_env_build.log 2>&1 &
 tail -f agents_env_build.log
 ```
+
+
 
 ### 4. API key
 
@@ -62,11 +67,15 @@ Task workloads are built under `<artifacts_dir>/data/<task>/views`.
 nohup bash scripts/prepare_data/esci.sh > esci_build.log 2>&1 &
 ```
 
+
+
 #### MAVE
 
 ```bash
 nohup bash scripts/prepare_data/mave.sh > mave_build.log 2>&1 &
 ```
+
+
 
 #### RAID
 
@@ -74,13 +83,17 @@ nohup bash scripts/prepare_data/mave.sh > mave_build.log 2>&1 &
 nohup bash scripts/prepare_data/raid.sh > raid_build.log 2>&1 &
 ```
 
+
+
 ## ⚡ Running experiments
 
 With the main environment active: 
+
 - Replace `mave` with `esci` or `raid` for the other tasks
 - models are listed in `configs/agent_eval/model/` (add yours the same way if needed)
 
 BOTTLED (agent):
+
 ```bash
 python agent_eval.py --config-name agent_eval/mave_bottled \
   agent_eval/model@model=openrouter_opus_5 \
@@ -89,6 +102,7 @@ python agent_eval.py --config-name agent_eval/mave_bottled \
 ```
 
 Zero-shot:
+
 ```bash
 python zeroshot_eval.py --config-name zeroshot_eval/mave_zeroshot \
   zeroshot_eval/model@model=openrouter_opus_5 \
@@ -97,6 +111,7 @@ python zeroshot_eval.py --config-name zeroshot_eval/mave_zeroshot \
 ```
 
 Obtaining teacher labels:
+
 ```bash
 python zeroshot_eval.py --config-name zeroshot_eval/mave_teacher_labels \
   zeroshot_eval/model@model=openrouter_z_ai_glm_5p3_flash \
@@ -105,6 +120,7 @@ python zeroshot_eval.py --config-name zeroshot_eval/mave_teacher_labels \
 ```
 
 Student training:
+
 ```bash
 python distill.py \
   task=mave \
@@ -178,4 +194,10 @@ Runs are written to `<artifacts_dir>/results/<group>/<date>/<time>`.
 └── zeroshot_eval.py                # zero-shot eval: one model call per line of a sample (OpenRouter sync / OpenRouter batch / local vLLM), plus scoring
 ```
 
+
+
+## Code for the following will be added soon:
+
+- Contamination judge
+- Jev evaluation
 
