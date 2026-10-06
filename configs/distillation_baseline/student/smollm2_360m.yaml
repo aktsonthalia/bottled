@@ -1,0 +1,28 @@
+# @package _global_
+student:
+  name: HuggingFaceTB/SmolLM2-360M-Instruct
+  dtype: bfloat16
+  attn_implementation: kernels-community/flash-attn2
+
+
+# SFTConfig fields, passed as keyword arguments: https://huggingface.co/docs/trl/v1.13.0/en/sft_trainer#trl.SFTConfig
+training: # values from the alignment handbook's smollm2 sft recipe: https://github.com/huggingface/alignment-handbook/blob/main/recipes/smollm2/sft/config_smol.yaml
+  max_length: null # padding_free does not truncate; TRL's default of 1024 would refuse to start
+  seed: ${seed}
+  num_train_epochs: 2
+  per_device_train_batch_size: 8
+  gradient_accumulation_steps: 16 # 8 x 16 = 128 sequences per optimizer step. The recipe uses 4 x 4 = 16 x 8 gpus.
+  lr_scheduler_type: cosine
+  optim: adamw_torch_fused
+  warmup_steps: 0.1
+  padding_free: true
+
+inference: # https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct#running-the-model
+  sampling_params:
+    max_tokens: 512
+    temperature: 0.2
+    top_p: 0.9
+    seed: ${seed}
+
+sweep:
+  learning_rates: [1.0e-3] # one student is trained per learning rate

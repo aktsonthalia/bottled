@@ -1,0 +1,6 @@
+is_local: true
+name: student
+path: ??? # the saved student dir
+chat_template_kwargs:
+  enable_thinking: false
+sampling_params: ??? # vllm.SamplingParams keyword arguments; max_tokens is eval.max_tokens

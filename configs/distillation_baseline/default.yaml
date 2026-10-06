@@ -1,0 +1,19 @@
+# @package _global_
+defaults:
+  - /base
+  - student: ???
+  - task: ???
+  - _self_
+
+group: debug
+
+seed: 0 # the whole pipeline: train/eval split, training, and the student's sampling at inference
+
+eval_fraction: 0.1 # share of teacher labels held out as SFTTrainer's eval_dataset
+
+# A finished distill run dir. When set, training is skipped and the student its selection.json selected runs over dataset.sample.
+inference_only: null
+
+hydra:
+  searchpath:
+    - file://configs

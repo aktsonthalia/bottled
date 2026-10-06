@@ -1,0 +1,6 @@
+is_local: false
+name: openrouter/anthropic/claude-opus-5
+# https://openrouter.ai/api/v1/models/anthropic/claude-opus-5-20260723/endpoints on 2026-08-28.
+limit:
+  context: 1000000
+  output: 128000

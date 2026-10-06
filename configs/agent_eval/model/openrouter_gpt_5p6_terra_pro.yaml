@@ -1,0 +1,6 @@
+is_local: false
+name: openrouter/openai/gpt-5.6-terra-pro
+# https://openrouter.ai/api/v1/models/openai/gpt-5.6-terra-pro-20260709/endpoints on 2026-08-27.
+limit:
+  context: 1050000
+  output: 128000

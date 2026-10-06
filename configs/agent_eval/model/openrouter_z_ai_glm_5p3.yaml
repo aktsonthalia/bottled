@@ -1,0 +1,6 @@
+is_local: false
+name: openrouter/z-ai/glm-5.3
+# https://openrouter.ai/api/v1/models/z-ai/glm-5.3-20260816/endpoints, z-ai on 2026-09-17 (charts/openrouter_endpoints_glm-5.3-20260816_2026-09-17.json).
+limit:
+  context: 1048576
+  output: 131072

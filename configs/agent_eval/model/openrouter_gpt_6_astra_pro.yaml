@@ -1,0 +1,6 @@
+is_local: false
+name: openrouter/openai/gpt-6-astra-pro
+# https://openrouter.ai/api/v1/models/openai/gpt-6-astra-pro-20260903/endpoints on 2026-09-19.
+limit:
+  context: 1050000
+  output: 128000

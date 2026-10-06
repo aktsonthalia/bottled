@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - default
+  - _self_
+
+prompt: raid_bottled
+
+dataset:
+  name: raid
+  root: raid
+  # Names the questions/gt/offsets files that sample() wrote under views.
+  sample: full_seed1789669695

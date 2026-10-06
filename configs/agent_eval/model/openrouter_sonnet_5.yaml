@@ -1,0 +1,6 @@
+is_local: false
+name: openrouter/anthropic/claude-sonnet-5
+# https://openrouter.ai/api/v1/models/anthropic/claude-sonnet-5-20260630/endpoints on 2026-08-27.
+limit:
+  context: 1000000
+  output: 128000

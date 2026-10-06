@@ -1,0 +1,9 @@
+# @package _global_
+teacher:
+  labels_dir: ??? # path to the zeroshot eval containing the teacher's labels
+
+dataset:
+  name: mave
+  root: mave
+  # Names the questions/gt/offsets files that sample() wrote under views. The teacher's idx is a line number into these.
+  sample: full_seed1789474317

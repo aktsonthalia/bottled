@@ -1,0 +1,6 @@
+is_local: false
+name: openrouter/alibaba/qwen3.8-max-0902
+# https://openrouter.ai/api/v1/models/qwen/qwen3.8-max-20260902/endpoints on 2026-09-18.
+limit:
+  context: 1000000
+  output: 131072

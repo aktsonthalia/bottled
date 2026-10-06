@@ -1,0 +1,6 @@
+is_local: false
+name: openrouter/z-ai/glm-5.3-flash
+# https://openrouter.ai/api/v1/models/z-ai/glm-5.3-flash-20260826/endpoints, z-ai/fp8 on 2026-09-16 (charts/openrouter_endpoints_glm-5.3-flash-20260826_2026-09-16.json).
+limit:
+  context: 1048576
+  output: 131072

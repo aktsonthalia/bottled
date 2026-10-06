@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - esci_zeroshot
+  - _self_
+
+dataset:
+  sample: full_seed1789578089
+
+api_budget_mtok: 5

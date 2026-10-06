@@ -1,0 +1,7 @@
+# Machine-specific settings: copy this file to configs/machine.yaml and
+# fill in the paths for this machine. configs/machine.yaml is gitignored.
+artifacts_dir: /path/to/artifacts (can be set to your repo root)
+conda_envs_root: /path/to/conda-envs
+agents_env_name: /name/of/your/conda/environment/for/the/agent
+# fuse-overlayfs must be available for the current implementation
+use_fuse_overlayfs: true

@@ -1,0 +1,21 @@
+# @package _global_
+defaults:
+  - /base
+  - model: ???
+  - _self_
+  
+group: debug
+
+# Path to an existing run dir to resume (append to its out/raw). null = fresh run.
+resume: null
+
+eval:
+  max_tokens: 16384
+  # Attempts the SDK makes per call before the run stops.
+  max_retries: 3
+  # Requests in flight at once.
+  concurrency: 16
+  # raw.jsonl keeps the record of every raw_every-th line (0, raw_every, ...); out.txt always has every line.
+  raw_every: 1
+  batch: false # Send the whole sample as one OpenRouter batch.
+  batch_max_tokens: 1024 # max_tokens of a batched call, max_tokens / 16, to avoid unpredictable billing.

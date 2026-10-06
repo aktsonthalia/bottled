@@ -1,0 +1,18 @@
+# @package _global_
+group: debug
+
+skip_scoring: false
+
+# `null` leaves the provider's default alone
+# Any other value is sent as the effort, including "none" for no reasoning.
+harness_thinking: high
+
+unit_tests_only: false
+
+hydra:
+  run:
+    dir: ${oc.env:BOTTLED_ARTIFACTS_ROOT}/results/${group}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: ${oc.env:BOTTLED_ARTIFACTS_ROOT}/results/${group}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+

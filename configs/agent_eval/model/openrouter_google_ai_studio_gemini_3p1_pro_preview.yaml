@@ -1,0 +1,6 @@
+is_local: false
+name: openrouter/google-ai-studio/gemini-3.1-pro-preview
+# https://openrouter.ai/api/v1/models/google/gemini-3.1-pro-preview-20260219/endpoints, google-ai-studio on 2026-09-15 (charts/openrouter_endpoints_gemini-3.1-pro-preview-20260219_2026-09-15.json).
+limit:
+  context: 1048576
+  output: 65536

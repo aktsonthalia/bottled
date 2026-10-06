@@ -1,0 +1,14 @@
+# @package _global_
+defaults:
+  - /base
+  - harness: opencode
+  - model: ???
+  - _self_
+
+time_budget_min: 600
+api_budget_mtok: 5
+enforce_budgets: 1
+run_unit_tests: false
+mtok_weights_csv: charts/mtok_weights.csv
+allowed_models:
+  - ${model.name}

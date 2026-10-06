@@ -1,0 +1,6 @@
+is_local: false
+name: openrouter/google-ai-studio/gemini-3.1-flash-lite-preview
+# https://openrouter.ai/api/v1/models/google/gemini-3.1-flash-lite-preview-20260303/endpoints on 2026-08-28.
+limit:
+  context: 1048576
+  output: 65536

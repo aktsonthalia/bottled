@@ -1,0 +1,6 @@
+is_local: false
+name: openrouter/alibaba/qwen3.8-flash
+# https://openrouter.ai/api/v1/models/qwen/qwen3.8-flash-20260826/endpoints, alibaba on 2026-09-18 (charts/openrouter_endpoints_qwen3.8-flash-20260826_2026-09-18.json).
+limit:
+  context: 1000000
+  output: 131072

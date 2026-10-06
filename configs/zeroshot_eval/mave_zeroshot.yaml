@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - default
+  - _self_
+
+prompt: mave_zeroshot
+
+dataset:
+  name: mave
+  root: mave
+  # Names the questions/gt/offsets files that sample() wrote under views.
+  sample: n1000_seed1789474389

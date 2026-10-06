@@ -1,0 +1,13 @@
+model,tag,base_input_per_mtok,output_per_mtok,cache_hit_refresh_per_mtok,5m_cache_write_per_mtok,1h_cache_write_per_mtok
+openrouter/deepinfra/deepseek-v4-flash-0423,deepinfra/fp8,0.09,0.18,0.018,,
+openrouter/google-ai-studio/gemini-3.1-pro-preview,google-ai-studio,2.0,12.0,0.2,2.375,
+openrouter/z-ai/glm-5.3-flash,z-ai/fp8,0.15,0.5,0.03,,
+openrouter/openai/gpt-5.6-sol-pro,openai,2.0,10.0,0.2,2.5,
+openrouter/anthropic/claude-opus-5,anthropic,5.0,25.0,0.5,6.25,10.0
+openrouter/google-ai-studio/gemini-3.1-flash-lite-preview,google-ai-studio,0.25,1.5,0.025,0.3333333333333333,
+openrouter/anthropic/claude-sonnet-5,anthropic,2.0,10.0,0.2,2.5,4.0
+openrouter/openai/gpt-5.6-terra-pro,openai,2.0,12.0,0.2,2.5,
+openrouter/z-ai/glm-5.3,z-ai/fp8,1.4,4.4,0.26,,
+openrouter/alibaba/qwen3.8-max-0902,alibaba,2.0,6.0,0.25,2.5,
+openrouter/alibaba/qwen3.8-flash,alibaba,0.15,0.47,0.016,0.2,
+openrouter/openai/gpt-6-astra-pro,openai,10.0,50.0,1.0,12.5,

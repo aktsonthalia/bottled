@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - default
+  - _self_
+
+prompt: raid_zeroshot
+
+dataset:
+  name: raid
+  root: raid
+  # Names the questions/gt/offsets files that sample() wrote under views.
+  sample: n1000_seed1789669790

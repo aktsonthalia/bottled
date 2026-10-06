@@ -1,0 +1,5 @@
+counter,weight,description
+input_tokens,1.0,ordinary input tokens excluding cache reads and writes
+output_tokens,2.0,output tokens
+cache_creation_input_tokens,1.0,input tokens written to cache
+cache_read_input_tokens,0.1,input tokens read from cache
