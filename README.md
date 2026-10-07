@@ -1,6 +1,6 @@
 # BOTTLED
 
-Code for the paper, "Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?"
+Code for the paper ["Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?"](https://arxiv.org/abs/2610.08775)
 
 ## ⚙️ Setup
 
@@ -22,8 +22,7 @@ In `configs/machine.yaml`,
 This environment runs `agent_eval.py`, `zeroshot_eval.py` and `distill.py`. It is built at `<conda_envs_root>/bottled`:
 
 ```bash
-nohup bash scripts/create_main_env.sh > main_env_build.log 2>&1 &
-tail -f main_env_build.log
+bash scripts/create_main_env.sh
 ```
 
 Activate it:
@@ -41,15 +40,14 @@ This environment is used by agents.
 Set `agents_env_name` in `configs/machine.yaml`; the environment is built at `<conda_envs_root>/<agents_env_name>`. Then, with the main environment active, run:
 
 ```bash
-nohup bash scripts/create_solvers_base.sh > agents_env_build.log 2>&1 &
-tail -f agents_env_build.log
+bash scripts/create_solvers_base.sh
 ```
 
 
 
 ### 4. API key
 
-Currently, this repo only supports [OpenRouter](https://openrouter.ai) models. Export your key:
+Currently, this repo only supports [OpenRouter](https://openrouter.ai) models. Set your key:
 
 ```bash
 export OPENROUTER_API_KEY=...
@@ -64,7 +62,7 @@ Task workloads are built under `<artifacts_dir>/data/<task>/views`.
 #### ESCI
 
 ```bash
-nohup bash scripts/prepare_data/esci.sh > esci_build.log 2>&1 &
+bash scripts/prepare_data/esci.sh
 ```
 
 
@@ -72,7 +70,7 @@ nohup bash scripts/prepare_data/esci.sh > esci_build.log 2>&1 &
 #### MAVE
 
 ```bash
-nohup bash scripts/prepare_data/mave.sh > mave_build.log 2>&1 &
+bash scripts/prepare_data/mave.sh
 ```
 
 
@@ -80,7 +78,7 @@ nohup bash scripts/prepare_data/mave.sh > mave_build.log 2>&1 &
 #### RAID
 
 ```bash
-nohup bash scripts/prepare_data/raid.sh > raid_build.log 2>&1 &
+bash scripts/prepare_data/raid.sh
 ```
 
 
@@ -201,3 +199,15 @@ Runs are written to `<artifacts_dir>/results/<group>/<date>/<time>`.
 - Contamination judge
 - Jev evaluation
 
+## 📄 Citation
+
+If you use this code or find our work interesting, please cite:
+
+```bibtex
+@article{sonthalia2026agent,
+  title={Agent in a Bottle: Can {LLM} Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?},
+  author={Sonthalia, Ankit and Puerto, Haritz and Rubinstein, Alexander and Gubri, Martin and Oh, Seong Joon},
+  journal={arXiv:2610.08775},
+  year={2026}
+}
+```
